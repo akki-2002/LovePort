@@ -410,12 +410,14 @@
 }
 
 .testimonial-item {
-  background-color: #f9f9f9;
+  background-color: #edebeb;
   /* border: 5px so*/
   border-radius: 20px;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   display: flex;
   flex-direction: column;
+  height: 350px; /* Set a fixed height */
+  overflow: hidden;
 }
 
 .profile-container {
@@ -461,6 +463,7 @@
 .message-container {
   padding: 20px;
   background-color: #edebeb;
+
 }
 
 .message {
@@ -469,7 +472,7 @@
   font-weight: 500;
   line-height: 29.26px;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* About us Gallery css */
