@@ -582,13 +582,23 @@
     color: #98168B;
     
   }
+
+  .footer-left .email a{
+    text-decoration: none;
+    color: #98168B;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+  }
   
-  .footer-left .address p.india {
+  .footer-left .address a, p.india {
     font-family: Montserrat;
     font-size: 20px;
     font-weight: 900;
     line-height: 24.38px;
     text-align: left;
+    text-decoration: none;
+    color: #98168B;
   }
   
   .footer-left .social-icons a{
@@ -652,8 +662,13 @@
     text-align: right;
   }
   
-  .footer-right p .oar {
+  .footer-right p .oar a{
     font-weight: bold;
+    text-decoration: none;
+    color: #edebeb;
+    font-family: Notable;
+    font-size: 30px;
+
   }
   
 

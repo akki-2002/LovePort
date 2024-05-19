@@ -9,10 +9,11 @@ function Footer() {
     <footer className="footer">
       <div className="footer-left">
         <img src={logo} alt="Love Port Logo" />
-        <div className="email">loveport2011@gmail.com</div>
+        <div className="email"><a href="mailto: loveport2011@gmail.com">loveport2011@gmail.com</a></div>
         <div className="phone">+91 7000296299</div>
         <div className="address">
-          Shri Ram Apartments, Jeevan Jyoti Colony, Satna- 485001, Madhya Pradesh
+          <a target="_blank" href="https://maps.app.goo.gl/eZbH5gU8LQUK5sGD6
+          ">Shri Ram Apartments, Jeevan Jyoti Colony, Satna- 485001, Madhya Pradesh</a>
           <p className="india">INDIA</p>
         </div>
         <div className="social-icons">
@@ -36,7 +37,7 @@ function Footer() {
           <li>Contact Us</li>
         </ul>
         <p>
-          Design and Development by <span className="oar">&nbsp;AKSHAT</span>
+          Design and Development by <span className="oar">&nbsp;<a target="_blank" href="https://akshatagrawalportfoliowebsite.netlify.app/">AKSHAT</a></span>
         </p>
       </div>
     </footer>
