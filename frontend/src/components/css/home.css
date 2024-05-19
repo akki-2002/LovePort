@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@300&family=Lexend+Deca:wght@200&family=Livvic&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.horizontal-line {
+  border-bottom: 2px solid #ff5921;
+  margin: 20px 0;
+}
+
+/* Navbar CSS */
+.navMain {
+  width: 99%;
+  /* border: 1px solid black; */
+  margin: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70px;
+  background-color: white;
+  z-index: 5;
+}
+.navMain:nth-child(1) {
+  border: none;
+  position: sticky;
+  top: 0;
+}
+.navComps {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 25px;
+  opacity: 0px;
+}
+.navMain a {
+  text-decoration: none;
+  color: #4a4747;
+  font-size: 0.8rem;
+  display: flex;
+}
+.navComps img {
+  width: 25px;
+  margin-left: 0.5rem;
+}
+.navSearchBar {
+  border: 2px solid #98168b;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  position: relative;
+  border-radius: 15px;
+}
+.navSearchBar input {
+  padding: 10px;
+  width: 100%;
+  /* border: 1px solid black; */
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  background-color: white;
+}
+.navSearchBar img {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  width: 20px;
+  gap: 1rem;
+}
+.test {
+  width: 100%;
+  height: 150vh;
+  background-color: white;
+}
+
+/* SliderImg CSS */
+
+.container.testimonials_container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.certificate-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: #98168b;
+}
+
+/* Best Selling CSS */
+.sub-title {
+  margin: 3.5rem 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-title h2 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  color: black;
+}
+
+.sub-title .trendingNow-text {
+  margin-bottom: 2rem;
+  color: #044588;
+}
+
+.view-all-best-selling {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #044588;
+  cursor: pointer;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.product-item img {
+  width: 92%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.model-type {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px; 
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #98168b;
+  margin-right: 10px;
+}
+
+.price-container .fa-cart-plus {
+  font-size: 30px;
+  color: #98168b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.price-container .fa-cart-plus:hover {
+  color: #044588;
+  cursor: pointer;
+}
+
+/* Corporate Gifts Css */
+
+.corporate-gifts-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.corporate-gift-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    268.68deg,
+    rgba(217, 217, 217, 0.7) 8.82%,
+    #040988 86.66%
+  );
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 30%;
+  text-align: justify;
+  margin-left: 2rem;
+}
+
+.text-content h1 {
+  font-family: MonteCarlo;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 108.8px;
+  text-align: left;
+  color: goldenrod;
+}
+
+.text-content p {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.38px;
+  text-align: left;
+}
+
+.shop-now-button {
+  background-color: #040988;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  margin-right: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+  background-color: transparent;
+  border: 2px solid #040988;
+  color: #040988;
+  font-weight: 600;
+}
+
+/* Personalized Gifts Css */
+
+.personalized-gifts-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.personalized-gift-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    268.68deg,
+    rgba(217, 217, 217, 0.7) 8.82%,
+    #98168b 86.66%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 40%;
+  margin-left: 2rem;
+}
+
+.text-content2 h1 {
+  font-family: Notable;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 83.2px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.text-content2 p {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.38px;
+  text-align: left;
+}
+
+.shop-now-button2 {
+  background-color: #98168b;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  margin-right: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button2:hover {
+  background-color: transparent;
+  border: 2px solid #98168b;
+
+  color: #98168b;
+
+  font-weight: 600;
+}
+
+/* Testimonials css */
+.sub-title {
+  margin: 3.5rem 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .trendingNow-text {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.header .view-all-best-selling {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: #044588;
+  margin-right: 20px;
+}
+
+.testimonials-container {
+  margin: 2rem 0rem 2rem 0rem;
+  cursor: pointer;
+}
+
+.testimonial-item {
+  background-color: #f9f9f9;
+  /* border: 5px so*/
+  border-radius: 20px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  background: #98168b;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /* border-bottom: 2px solid #98168B;  */
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 39.01px;
+  text-align: left;
+}
+
+.location {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  text-align: left;
+  color: #a9d4ff;
+}
+
+.message-container {
+  padding: 20px;
+  background-color: #edebeb;
+}
+
+.message {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* About us Gallery css */
+/* Gallery-specific CSS */
+.gallery-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 6rem 5rem;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-title {
+  margin-top: 3rem;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #044588;
+  margin-bottom: 3rem;
+}
+
+.gallery-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: justify;
+  max-width: 90%;
+}
+
+.gallery-swiper {
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-image-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 3.5rem;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 15px;
+}
+
+.swiper-pagination-bullet {
+  background: #98168b !important;
+  font-size: 2rem;
+}
+
+/* Footer CSS */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #044588;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .footer-left {
+    max-width: 40%;
+    background-color: white; 
+    border: 2px solid #98168B; 
+    color: #98168B;
+    padding: 20px;
+    
+  }
+  
+  .footer-left img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-left .email,
+  .footer-left .phone,
+  .footer-left .address {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: left;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #98168B;
+    
+  }
+  
+  .footer-left .address p.india {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24.38px;
+    text-align: left;
+  }
+  
+  .footer-left .social-icons a{
+    display: flex;
+    gap: 10px;
+    margin: 30px 0;
+    width: 45px;
+    height: 35px;
+    padding: 5.83px 2.92px;
+    cursor: pointer;
+    color: #98168B;
+  }
+  
+  .footer-left .social-icons span {
+    display: flex;
+    gap: 10px;
+    font-size: 34px;
+    color: #98168B;
+  }
+  
+  .footer-left .copyright {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+  }
+  
+  .footer-right {
+    max-width: 40%;
+    color: white; 
+    margin-right: 2rem;
+  }
+  
+  .footer-right ul {
+    margin-top: 5rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .footer-right ul li {
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: right;
+  }
+  
+  .footer-right ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right p {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 24.38px;
+    text-align: right;
+  }
+  
+  .footer-right p .oar {
+    font-weight: bold;
+  }
+  
+
+
+
+
+
+
+
+
+

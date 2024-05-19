@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.billingMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fffbf5;
+}
+
+.billingLeftMain{
+    border: none;
+    border-right: 0.7px solid #B4B4B4;
+    width: 60%;
+}
+
+.billingLeft{
+    /* border: 1px solid purple; */
+    width: 85%;
+    margin: auto;
+}
+
+.billingRgt{
+    width: 40%;
+}
+
+.cartRgtt{
+    width: 100%;
+    padding-top: 20px;
+}
+
+.backToCart{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    margin-top: 20px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+.backToCart img{
+    transition: 0.2s ease-in-out;
+    font-size: 1rem;
+}
+
+.backToCart:hover img{
+    transform: translateX(-5px);
+
+}
+
+.backToCart p{
+    font-family: Montserrat;
+font-size: 18px;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: 0em;
+color: #000000;
+}
+
+.form{
+    gap: 10px;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.firstname input, .newPass input{
+    border: 0.7px solid #B4B4B4;
+}
+
+.newPass input{
+    cursor: context-menu;
+    caret-color: transparent;
+}
+.newPass p{
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0em;
+color: red;
+padding-left: 5px;
+/* display: none; */
+
+}
+
+
+.firstname select {
+    width: 100%;
+    outline: none;
+    border: 0.7px solid #000000;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 7px;
+    border: 0.7px solid #B4B4B4;
+}
+
+.firstname p{
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0em;
+color: red;
+padding-left: 5px;
+
+}
+
+.additionalInfo{
+    font-family: Montserrat;
+font-size: 15px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0em;color: #363636;
+margin-top: 10px;
+
+}
+
+.cartTotalHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+padding-bottom: 30px;
+border: none;
+    border-bottom: 0.7px solid #b4b4b4;
+}
+
+.cartTotalHeadingg{
+    padding-bottom: 20px;
+}
+
+
+
+
+.cartTotalHeading p{
+    font-family: Montserrat;
+font-size: 10px;
+font-weight: 400;
+line-height: 12px;
+letter-spacing: 0em;
+color: #454545;
+text-decoration: underline;
+cursor: pointer;
+
+}
+
+.cartTotalHeading h1{
+    font-family: Montserrat;
+font-size: 25px;
+font-weight: 600;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+color: #454545;
+padding: 0 0px;
+padding-bottom: 0px;
+border: none;
+
+}
+
+.cartTotal p {
+    padding: 30px 0;
+    padding-left: 50px;
+}
+
+.cartTotal span {
+    padding: 30px 0;
+    padding-right: 50px;
+}
+
+.cartTotall p{
+    padding: 20px 0;
+    padding-left: 50px;
+}
+
+.cartTotall span{
+    padding: 20px 0;
+    padding-right: 50px;
+}
+
+.cartCheckoutBtn {
+    padding: 30px 100px;
+    border: none;
+}
+
+.cartCheckoutBtn button {
+    padding: 15px 0px;
+}
+
+.cItemRemove p{
+    font-family: Montserrat;
+font-size: 17px;
+font-weight: 700;
+line-height: 21px;
+letter-spacing: 0em;
+color: #363636;
+}
+
+.cItemImgg {
+    width: 86px;
+    height: 92px;
+    border-radius: 6.5px;
+}
+
+.cItemDetailss h2{
+    font-family: Montserrat;
+font-size: 14px;
+font-weight: 600;
+line-height: 16px;
+letter-spacing: 0em;
+color: #454545;
+}
+
+.cItemDetailss p{
+    font-family: Montserrat;
+font-size: 8px;
+font-weight: 500;
+line-height: 10px;
+letter-spacing: 0em;
+color: #363636;
+}
+
+.cItemDetailss {
+    height: 92px;
+}
+
+.cItemm {
+    width: 345px;
+}
+
+.clContentt{
+    padding: 9px 0;
+    height: 377px;
+    border: none;
+    gap: 9px;
+    border-bottom: 0.7px solid #b4b4b4;
+}

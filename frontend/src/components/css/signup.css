@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .signupMain {
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    color: #fffbf5;
+    background-color: #fffbf5;
+  }
+  
+  .signup {
+    /* border: 1px solid blue; */
+    width: 35%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .signupHeading {
+    font-family: Montserrat;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0em;
+    color: #454545;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .signup form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .signupContent,
+  .signupContent1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* cursor: pointer; */
+    width: 100%;
+  }
+  
+  .signupContent label,
+  .signupContent1 label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.5s ease-in-out;
+    /* cursor: pointer; */
+  }
+  
+  .signupContent p,
+  .signupContent1 p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    color: #454545;
+  }
+  
+  .signupContent span,
+  .signupContent1 span {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    color: #98168B;
+  }
+  
+  .signupContent label img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .signupContent1 label img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .eye {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  
+  .eye img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  
+  .signupContent input {
+    width: 100%;
+    border: 0.9px solid #000000;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fffbf5;
+  }
+  
+  .signupContent1 input {
+    width: 92%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fffbf5;
+  }
+  
+  .ip {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 0.9px solid #000000;
+  }
+  
+  .signupBtns {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+  }
+  
+  .signupBtn {
+    width: 100%;
+  }
+  
+  .signupBtn button,
+  .loginBtn button {
+    width: 100%;
+    /* border: 1px solid #98168B; */
+    border: none;
+    /* border: 0.9px solid #000000; */
+    padding: 10px 0;
+    border-radius: 10px;
+    outline: none;
+    background-color: #98168B;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .signupBtn button:hover {
+    /* background-color: #d73a05; */
+  }
+  
+  .loginBtn {
+    width: 100%;
+  }
+  
+  .loginBtn button {
+    background-color: transparent;
+    border: 1px solid #98168B;
+    box-shadow: 2px 2px 0px 0px #98168B;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #363636;
+  }
+  
+  .loginBtn button:hover {
+    /* background-color: #f7e3dd; */
+    /* box-shadow: none; */
+    /* color: #ffffff; */
+    /* translate: 2px 2px; */
+  }
+  
+  form p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    color: #363636;
+  }
+  
