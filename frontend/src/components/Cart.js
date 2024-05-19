@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/cart.css';
 import { Link } from 'react-router-dom';
 import prod1 from '../components/Images/Product Photos/12.jpeg';
 import cross from '../components/Images/cross.png';
 import arrow_back from '../components/Images/Arrow_back.png';
 
-const cartItems = [
+const initialCartItems = [
   {
     id: 1,
     name: 'Corporate Gift Set',
@@ -20,10 +20,16 @@ const cartItems = [
     category: 'Corporate Gifts',
     price: 599,
   },
-  
 ];
 
 function Cart() {
+  const [cartItems, setCartItems] = useState(initialCartItems);
+
+  const handleRemove = (id) => {
+    const updatedCartItems = cartItems.filter(item => item.id !== id);
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <div className="cartMain">
       <div className="cartTop">
@@ -44,7 +50,7 @@ function Cart() {
                     </div>
                   </div>
                   <div className="cItemRemove">
-                    <p>REMOVE <img src={cross} alt="" /> </p>
+                    <p onClick={() => handleRemove(item.id)}>REMOVE <img src={cross} alt="Remove" /></p>
                   </div>
                 </div>
               ))}
@@ -68,7 +74,7 @@ function Cart() {
       </div>
       <div className="cartBottom">
         <div className="clContinueShop">
-          <Link to={'/'} ><img src={arrow_back} alt="" /></Link><p>Continue Shopping</p>
+          <Link to={'/'} ><img src={arrow_back} alt="Continue Shopping" /></Link><p>Continue Shopping</p>
         </div>
       </div>
     </div>

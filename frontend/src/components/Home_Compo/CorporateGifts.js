@@ -54,11 +54,9 @@ function CorporateGifts() {
         <div className="product-section">
           {products.map((product) => (
             <div className="product-item" key={product.id}>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="hoverable"
-              />
+              <Link to={'/productDetails'}>
+              <img src={product.image} alt={product.name} className="hoverable" />
+            </Link>
               <div className="product-details">
                 <p className="model-type">{product.name}</p>
                 <div className="price-container">

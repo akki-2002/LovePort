@@ -127,7 +127,7 @@ function Signup() {
 
             <div className="signupBtns">
               <div className="signupBtn">
-                <button>REGISTER</button>
+              <Link to={'/'} style={{ textDecoration: 'none',  cursor: 'pointer' }}><button>REGISTER</button></Link>
               </div>
 
               <p>OR</p>
