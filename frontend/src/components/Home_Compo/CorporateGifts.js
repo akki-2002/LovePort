@@ -12,6 +12,8 @@ import img12 from "../Images/Product Photos/12.jpeg";
 import { FaCartPlus } from "react-icons/fa";
 
 function CorporateGifts() {
+
+
   // Array of product objects
   const products = [
     { id: 1, name: "Corporate Gift Set", price: 599, image: img5 },
