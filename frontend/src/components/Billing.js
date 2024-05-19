@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import "../components/css/billing.css";
-import arrow_back from "../components/Images/Product Photos/12.jpeg";
-import backprint_t from "../components/Images/Product Photos/18.jpeg";
-import cross from "../components/Images/cross.png";
 import { Link } from "react-router-dom";
+import backprint_t from "../components/Images/Product Photos/18.jpeg";
 
 function Billing() {
-
-  // OnClick for default Country
-
   const [country, setCountry] = useState({
     display: "none",
   });
@@ -16,8 +11,6 @@ function Billing() {
   const handleCountryClick = () => {
     setCountry({ display: "block" });
   };
-
-  // Dropdown for States of India
 
   const [selectedState, setSelectedState] = useState("");
 
@@ -62,8 +55,6 @@ function Billing() {
     setSelectedState(e.target.value);
   };
 
-  // Validation on Ph No
-
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -88,8 +79,6 @@ function Billing() {
     }
   };
 
-  // Validation for Email
-
   const [email, setEmail] = useState("");
   const [errorMessagee, setErrorMessagee] = useState("");
 
@@ -109,12 +98,10 @@ function Billing() {
   };
 
   const handleBlurr = () => {
-    if (!errorMessage && email === "") {
+    if (!errorMessagee && email === "") {
       setErrorMessagee("");
     }
   };
-
-  // Validation for Pin Code
 
   const [pincode, setPincode] = useState("");
   const [errorMessageee, setErrorMessageee] = useState("");
@@ -140,16 +127,36 @@ function Billing() {
     }
   };
 
+  const orderItems = [
+    {
+      id: 1,
+      name: "Corporate Gift Set",
+      category: "Corporate Gifts",
+      price: 599,
+      image: backprint_t,
+    },
+    {
+      id: 2,
+      name: "Custom Mug",
+      category: "Personalized Gifts",
+      price: 299,
+      image: backprint_t,
+    },
+    
+    
+  ];
+
+  const totalAmount = orderItems.reduce((total, item) => total + item.price, 0);
+
   return (
     <>
-    
       <div className="billingMain">
         <div className="billingLeftMain">
           <div className="billingLeft">
-            <Link to={'/cart'}>
-            <div className="backToCart">
-              <p>Back to Cart</p>
-            </div>
+            <Link to={"/cart"}>
+              <div className="backToCart">
+                <p>Back to Cart</p>
+              </div>
             </Link>
             <div className="blHeading">
               <h1>Billing and Shipping</h1>
@@ -215,7 +222,6 @@ function Billing() {
                       </option>
                     ))}
                   </select>
-                  {/* <p>Selected State: {selectedState}</p> */}
                 </div>
               </div>
 
@@ -277,13 +283,8 @@ function Billing() {
                 <input type="text" placeholder="" />
               </div>
             </form>
-            
           </div>
-          
         </div>
-        
-
-
 
         <div className="billingRgt">
           <div className="cartRgt cartRgtt">
@@ -292,139 +293,30 @@ function Billing() {
               <p>Edit Order</p>
             </div>
             <div className="clContent clContentt">
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
+              {orderItems.map((item) => (
+                <div key={item.id} className="cItem1 cItem11">
+                  <div className="cItem cItemm">
+                    <div className="cItemImg cItemImgg">
+                      <img src={item.image} alt={item.name} />
+                    </div>
+                    <div className="cItemDetails cItemDetailss">
+                      <h2>{item.name}</h2>
+                      <p>{item.category}</p>
+                    </div>
+                    <div className="cItemPrice cItemPricee">
+                      <h3>₹{item.price}</h3>
                     </div>
                   </div>
                 </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
+              ))}
+              <div className="clTotal clTotall">
+                <h2>Total:</h2>
+                <h2>₹{totalAmount}</h2>
               </div>
-
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
-              </div>
-
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
-              </div>
-
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
-              </div>
-
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
-              </div>
-
-              <div className="cItem1 cItem11">
-                <div className="cItem cItemm">
-                  <div className="cItemImg cItemImgg">
-                    {" "}
-                    <img src={backprint_t} alt="backprint_t" />{" "}
-                  </div>
-                  <div className="cItemDetails cItemDetailss">
-                    <h2>New Galaxy Over - Sized T-shirt</h2>
-                    <div className="p">
-                      <p>Size - M</p>
-                      <p>COLOR - White</p>
-                      <p>STYLE - Over Sized T- Shirt</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="cItemRemove">
-                  <p>₹599</p>
-                </div>
-              </div>
-
-              
-
-
+              <Link to={'/order'}><div className="cartCheckoutBtn">
+                <button>Place Order</button>
+              </div></Link>
             </div>
-            <div className="cartTotal cartTotall">
-              <p>Total</p>
-              <span>₹1896</span>
-            </div>
-            <Link to={'/order'}>
-            <div className="cartCheckoutBtn">
-              <button>PLACE ORDER</button>
-            </div>
-            </Link>
           </div>
         </div>
       </div>
@@ -433,3 +325,24 @@ function Billing() {
 }
 
 export default Billing;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

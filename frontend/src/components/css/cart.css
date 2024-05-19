@@ -133,8 +133,9 @@
   .cItemDetails {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 138px;
+    justify-content: center;
+    gap: 0.5rem;
+
   }
   
   .cItemDetails h2 {

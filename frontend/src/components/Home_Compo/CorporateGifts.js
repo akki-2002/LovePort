@@ -45,7 +45,7 @@ function CorporateGifts() {
             to={"/corporateGiftsAllProducts"}
             style={{ textDecoration: "none", cursor: "pointer" }}
           >
-            <button className="shop-now-button2">Shop Now</button>
+            <button className="shop-now-button">Shop Now</button>
           </Link>
         </div>
       </div>
