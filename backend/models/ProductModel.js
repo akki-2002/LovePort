@@ -2,54 +2,26 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const productModel = mongoose.Schema({
-    productImages:[{
+    productImage:{
         type: String
-    }],
+    },
     name: {
         type: String
     },
-    gender:{
-        type: String
-    },
-    sizes:[{
-        type: String
-    }],
-    colors:[{
-        type: String
-    }],
-    quantity:{
-        type: String
-    },
-    likes:{
-        // type: mongoose.Schema.Types.ObjectId,
-        // ref: 'User'
+    price:{
         type: String
     },
     description:{
-        descText:{
-            type:String
-        },
-        composition:{
-            type: String
-        },
-        gsm:{
-            type: String
-        },
-        color:{
-            type: String
-        },
-        countryOfProduction:{
-            type: String
-        },
-        washCare:{
-            type: String
-        },
-        sizing:{
-            type: String
-        },
-        estOrderProcessTime:{
-            type: String
-        }
+        type: String
+    },
+    quantity:{
+        type: String
+    },
+    productDetails:{
+        type: String
+    },
+    deliveryInfo:{
+        type: String
     },
     itemInStock:{
         type: Boolean

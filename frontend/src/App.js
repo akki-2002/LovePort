@@ -19,6 +19,7 @@ import Addresses from "./components/Addresses";
 import AcDetails from "./components/AcDetails";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import CreateProduct from "./components/CreateProduct";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         } />
         <Route path="/customizedGiftsAllProducts" element={<CustomizedGiftAllProduct />} />
         <Route path="/corporateGiftsAllProducts" element={<CorporateGiftsAllProducts/>} />        
-        <Route path="/productDetails" element={<ProductPage />} />        
+        <Route path="/productDetails/:id" element={<ProductPage />} />        
+        <Route path="/addProduct" element={<CreateProduct />} />        
         <Route path="/cart" element={<Cart />} />       
         <Route path="/billing" element={<Billing />} />       
 

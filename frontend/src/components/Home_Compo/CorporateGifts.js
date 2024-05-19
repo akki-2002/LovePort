@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CorporateGiftImg from "../Images/image 1.png";
 import img5 from "../Images/Product Photos/5.jpeg";
@@ -12,21 +12,23 @@ import img12 from "../Images/Product Photos/12.jpeg";
 import { FaCartPlus } from "react-icons/fa";
 
 function CorporateGifts() {
+  const [products, setProduts] = useState('')
 
+  useEffect(() => {
+    const fetchBlogs = async ()=>{
+        const response = await fetch("http://localhost:4002/products/getProducts")
+        const json = await response.json()
+  
+        if(response.ok){
+          setProduts(json)
+            // console.log(json.likes)
+        }
+    }
+        fetchBlogs()
+      }, [])
+    
 
-  // Array of product objects
-  const products = [
-    { id: 1, name: "Corporate Gift Set", price: 599, image: img5 },
-    { id: 2, name: "Corporate Gift Set", price: 599, image: img6 },
-    { id: 3, name: "Corporate Gift Set", price: 599, image: img7 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img8 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img9 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img10 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img11 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img12 },
-
-    // Add more products as needed
-  ];
+  
   return (
     <>
       <div className="corporate-gifts-container">
@@ -54,20 +56,23 @@ function CorporateGifts() {
 
       <div className="sub-title">
         <div className="product-section">
-          {products.map((product) => (
-            <div className="product-item" key={product.id}>
-              <Link to={'/productDetails'}>
-              <img src={product.image} alt={product.name} className="hoverable" />
-            </Link>
-              <div className="product-details">
-                <p className="model-type">{product.name}</p>
-                <div className="price-container">
-                  <p className="price">&#8377;{product.price}</p>
-                  <FaCartPlus className="fa-cart-plus" />
-                </div>
-              </div>
+        {products && products.map((product, index) => (
+        // <div >
+          <Link to={`/productDetails/${product._id}`} className="product-item" key={index}>
+              {/* <img src={`http://localhost:4002/uploads/${product.productImage}`} alt={product.name} className="hoverable" /> */}
+              <img src={`http://localhost:4002/uploads/${product.productImage}`} alt="" />
+
+            
+          <div className="product-details">
+            <p className="model-type">{product.name}</p>
+            <div className="price-container">
+              <p className="price">&#8377;{product.price}</p>
+              <FaCartPlus className="fa-cart-plus" />
             </div>
-          ))}
+          </div>
+          </Link>
+        // </div>
+      ))}
         </div>
       </div>
     </>
