@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import img1 from '../components/Images/Product Photos/1.jpeg';
 import img2 from '../components/Images/Product Photos/2.jpeg';
@@ -26,27 +26,44 @@ import Testimonials from './Home_Compo/Testimonials';
 
 function CorporateGiftsAllProducts() {
     // Array of product objects
-const products = [
-    { id: 1, name: "Corporate Gift Set", price: 599, image: img1 },
-    { id: 2, name: "Corporate Gift Set", price: 599, image: img2 },
-    { id: 3, name: "Corporate Gift Set", price: 599, image: img3 },
-    { id: 4, name: "Corporate Gift Set", price: 599, image: img4 },
-    { id: 5, name: "Corporate Gift Set", price: 599, image: img5 },
-    { id: 6, name: "Corporate Gift Set", price: 599, image: img6 },
-    { id: 7, name: "Corporate Gift Set", price: 599, image: img7 },
-    { id: 8, name: "Corporate Gift Set", price: 599, image: img8 },
-    { id: 9, name: "Corporate Gift Set", price: 599, image: img9 },
-    { id: 10, name: "Corporate Gift Set", price: 599, image: img10 },
-    { id: 11, name: "Corporate Gift Set", price: 599, image: img11 },
-    { id: 12, name: "Corporate Gift Set", price: 599, image: img12 },
-    { id: 13, name: "Corporate Gift Set", price: 599, image: img13 },
-    { id: 14, name: "Corporate Gift Set", price: 599, image: img14 },
-    { id: 15, name: "Corporate Gift Set", price: 599, image: img15 },
-    { id: 16, name: "Corporate Gift Set", price: 599, image: img16 },
-    { id: 17, name: "Corporate Gift Set", price: 599, image: img17 },
-    { id: 18, name: "Corporate Gift Set", price: 599, image: img18 },
-    { id: 19, name: "Corporate Gift Set", price: 599, image: img19 },
-];
+// const products = [
+//     { id: 1, name: "Corporate Gift Set", price: 599, image: img1 },
+//     { id: 2, name: "Corporate Gift Set", price: 599, image: img2 },
+//     { id: 3, name: "Corporate Gift Set", price: 599, image: img3 },
+//     { id: 4, name: "Corporate Gift Set", price: 599, image: img4 },
+//     { id: 5, name: "Corporate Gift Set", price: 599, image: img5 },
+//     { id: 6, name: "Corporate Gift Set", price: 599, image: img6 },
+//     { id: 7, name: "Corporate Gift Set", price: 599, image: img7 },
+//     { id: 8, name: "Corporate Gift Set", price: 599, image: img8 },
+//     { id: 9, name: "Corporate Gift Set", price: 599, image: img9 },
+//     { id: 10, name: "Corporate Gift Set", price: 599, image: img10 },
+//     { id: 11, name: "Corporate Gift Set", price: 599, image: img11 },
+//     { id: 12, name: "Corporate Gift Set", price: 599, image: img12 },
+//     { id: 13, name: "Corporate Gift Set", price: 599, image: img13 },
+//     { id: 14, name: "Corporate Gift Set", price: 599, image: img14 },
+//     { id: 15, name: "Corporate Gift Set", price: 599, image: img15 },
+//     { id: 16, name: "Corporate Gift Set", price: 599, image: img16 },
+//     { id: 17, name: "Corporate Gift Set", price: 599, image: img17 },
+//     { id: 18, name: "Corporate Gift Set", price: 599, image: img18 },
+//     { id: 19, name: "Corporate Gift Set", price: 599, image: img19 },
+// ];
+
+const [products, setProduts] = useState('')
+
+useEffect(() => {
+  const fetchBlogs = async ()=>{
+      const response = await fetch("http://localhost:4002/products/getProducts")
+      const json = await response.json()
+
+      if(response.ok){
+        setProduts(json)
+          // console.log(json.likes)
+      }
+  }
+      fetchBlogs()
+    }, [])
+
+console.log(products)
   return (
     <>
 
@@ -83,11 +100,13 @@ const products = [
     </Link>
   </div>
     <div className="product-section">
-      {products.map((product) => (
-        <div className="product-item" key={product.id}>
-          <Link to={'/productDetails'}>
-              <img src={product.image} alt={product.name} className="hoverable" />
-            </Link>
+      {products && products.map((product, index) => (
+        // <div >
+          <Link to={`/productDetails/${product._id}`} className="product-item" key={index}>
+              {/* <img src={`http://localhost:4002/uploads/${product.productImage}`} alt={product.name} className="hoverable" /> */}
+              <img src={`http://localhost:4002/uploads/${product.productImage}`} alt="" />
+
+            
           <div className="product-details">
             <p className="model-type">{product.name}</p>
             <div className="price-container">
@@ -95,7 +114,8 @@ const products = [
               <FaCartPlus className="fa-cart-plus" />
             </div>
           </div>
-        </div>
+          </Link>
+        // </div>
       ))}
     </div>
   </div>

@@ -51,6 +51,7 @@
   .prdiMax img {
     width: 100%;
     cursor: pointer;
+    height: 90%;
   }
   
   .prdDets {
@@ -92,7 +93,7 @@
     align-items: center;
   }
   
-  .quantity-controls button {
+  .quantity-controls div {
     padding: 6px 15px;
     /* border: 1px solid black; */
     background-color: white;
